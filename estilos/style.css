@@ -9,8 +9,9 @@ h1{
     text-align: center;
 }
 body{
-    background-color: #ddd;
+    background-image:linear-gradient(to bottom,grey,darkgrey,lightgrey);
     font-family:Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 div#corpo{
     max-width: 800px;
