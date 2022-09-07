@@ -7,6 +7,7 @@
 h1{
     font-family: PressStart2P;
     text-align: center;
+    text-shadow: 4px 4px 7px rgba(110, 110, 110, 0.507);
 }
 body{
     background-image:linear-gradient(to bottom,rgb(46, 45, 45),rgb(104, 104, 104),rgb(173, 173, 173));
