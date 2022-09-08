@@ -4,3 +4,5 @@
 # PHPcomMySQL
 
 Projeto utilizando PHP e MySQL
+
+*** EM CONSTRUÇÃO ***
