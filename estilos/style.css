@@ -10,7 +10,9 @@ h1{
     text-shadow: 4px 4px 7px rgba(110, 110, 110, 0.507);
 }
 body{
-    background-image:linear-gradient(to bottom,rgb(46, 45, 45),rgb(104, 104, 104),rgb(173, 173, 173));
+    background-image:url(../imagens/tVDEAR.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
     font-family:Arial, Helvetica, sans-serif;
     height: 100vh;
 }

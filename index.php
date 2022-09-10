@@ -15,21 +15,20 @@ require_once 'includes/banco.php';
 <div id="corpo">
     <h1>Escolha seu Jogo</h1>
     <table class="listagem">
-        <tr>
-            <td>Foto</td><td>Nome</td><td>Adm</td>
-        </tr>
-        <tr>
-            <td>Foto</td><td>Nome</td><td>Adm</td>
-        </tr>
-        <tr>
-            <td>Foto</td><td>Nome</td><td>Adm</td>
-        </tr>
-        <tr>
-            <td>Foto</td><td>Nome</td><td>Adm</td>
-        </tr>
-        <tr>
-            <td>Foto</td><td>Nome</td><td>Adm</td>
-        </tr>
+        <?php
+            $busca=$banco->query("select * from jogos order by nome");
+            if (!$busca)
+                echo "<tr><td>Infelizmente a busca deu erro!</tr></td>";
+            else{
+                if ($busca->num_rows==0)
+                    echo "<tr><td>Nenhum registro encontrado!</tr></td>";
+                else{
+                    while($reg=$busca->fetch_object()){
+                        echo "<tr><td>$reg->capa<td>$reg->nome<td>Adm";
+                    }
+                }
+            }
+        ?>
     </table>
 </div>
 <?php
