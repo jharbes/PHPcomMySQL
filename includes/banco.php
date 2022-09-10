@@ -11,12 +11,4 @@ $banco->query("set character_set_connection=utf8");
 $banco->query("set character_set_cliente=utf8");
 $banco->query("SET character_set_results=utf8");
 
-$busca=$banco->query("select * from generos");
-if (!$busca)
-    echo "<h2>Falha na busca! $banco->error</h2>";
-else{
-    while ($reg=$busca->fetch_object()){
-        print_r($reg);print "<br>";
-    }
-}
 ?>
