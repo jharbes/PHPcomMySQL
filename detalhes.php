@@ -25,10 +25,13 @@ require_once 'includes/funcoes.php';
         else{
             if ($busca->num_rows==1){
                 $reg=$busca->fetch_object();
-                echo "<tr><td rowspan='3'>Foto</td></tr>
-                <td><h2>$reg->nome</h2></td>
-                <tr><td>Descrição</td></tr>
-                <tr><td>Adm</td></tr>";
+                // Não colocar a função thumb() direto na tag img, nao vai funcionar.
+                $t=thumb($reg->capa);
+                echo "<tr><td rowspan='3'><img src='$t' class='full'/>";
+                echo "</td></tr>
+                <td><h2>$reg->nome</h2></td>";
+                echo "<tr><td style='text-align: justify;'>$reg->descricao</td></tr>";
+                echo "<tr><td>Adm</td></tr>";
             }
             else{
                 echo "<tr><td>Nenhum registro encontrado</tr></td>";
@@ -36,6 +39,7 @@ require_once 'includes/funcoes.php';
         }
         ?>
     </table>
+    <a href="index.php"><img src="icones/icoback.png" alt="Voltar"></a>
 </div>
 </body>
 </html>
