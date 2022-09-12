@@ -14,7 +14,14 @@ require_once 'includes/funcoes.php';
 
 ?>
 <div id="corpo">
+    <?php
+    include_once 'topo.php';
+    ?>
     <h1>Escolha seu Jogo</h1>
+    <form id="busca" action="index.php" method="get">
+        Ordernar: Nome | Produtora | Nota Alta | Nota Baixa | 
+       <label for="ibusca">Buscar: </label><input type="text" name="c" size="10" maxlength="40" id="ibusca">
+    </form>
     <table class="listagem">
         <?php
         /*

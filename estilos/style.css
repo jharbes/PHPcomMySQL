@@ -13,6 +13,12 @@ h1{
     font-family: PressStart2P;
     text-align: center;
     text-shadow: 4px 4px 7px rgba(110, 110, 110, 0.507);
+    padding: 20px;
+}
+form#busca{
+    font-size: 15px;
+    text-align: right;
+    padding: 20px;
 }
 body{
     background-image:url(../imagens/tVDEAR.jpg);
@@ -24,10 +30,14 @@ body{
 div#corpo{
     max-width: 800px;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
     box-shadow: 0px 0px 60px rgb(255, 255, 255);
     border-radius: 10px;
+}
+header{
+    font-size: 15px;
+    text-align: right;
 }
 img.mini{
     width: 50px;
@@ -68,10 +78,7 @@ footer{
     text-align: center;
     background-color: black;
     color: white;
-    margin-top: 30px;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    padding: 10px;
 }
