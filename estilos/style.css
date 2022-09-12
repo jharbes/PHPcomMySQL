@@ -26,6 +26,8 @@ body{
     background-size: cover;
     font-family:Arial, Helvetica, sans-serif;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 div#corpo{
     max-width: 800px;
@@ -75,6 +77,7 @@ table.detalhes td{
     vertical-align: center;
 }
 footer{
+    flex-shrink: 0;
     text-align: center;
     background-color: black;
     color: white;
