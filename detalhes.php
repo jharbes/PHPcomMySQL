@@ -27,9 +27,9 @@ require_once 'includes/funcoes.php';
                 $reg=$busca->fetch_object();
                 // Não colocar a função thumb() direto na tag img, nao vai funcionar.
                 $t=thumb($reg->capa);
-                echo "<tr><td rowspan='3'><img src='$t' class='full'/>";
-                echo "</td></tr>
-                <td><h2>$reg->nome</h2></td>";
+                echo "<tr><td rowspan='3'><img src='$t' class='full'/></td></tr>";
+                echo "<td><h2>$reg->nome</h2>";
+                echo "Nota: ".number_format($reg->nota,1)."/10.0";
                 echo "<tr><td style='text-align: justify;'>$reg->descricao</td></tr>";
                 echo "<tr><td>Adm</td></tr>";
             }
