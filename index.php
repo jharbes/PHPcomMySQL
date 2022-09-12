@@ -42,7 +42,7 @@ require_once 'includes/funcoes.php';
     </table>
 </div>
 <?php
-$banco->close();
+include_once 'rodape.php';
 ?>
 </body>
 </html>
