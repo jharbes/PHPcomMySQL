@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de Jogos</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
 </head>
 <body>
 <?php
@@ -15,9 +16,6 @@ $ordem=$_GET['o']??"n";
 $chave=$_GET['c']??"";
 ?>
 <div id="corpo">
-    <?php
-    include_once 'topo.php';
-    ?>
     <h1>Escolha seu Jogo</h1>
     <form id="busca" action="index.php" method="get">
         Ordernar: 
