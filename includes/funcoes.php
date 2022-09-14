@@ -6,4 +6,20 @@
         else
             return $caminho;
     }
+
+    function voltar(){
+        return "<a href='index.php'><img src='icones/icoback.png' alt='Voltar'></a>";
+    }
+
+    function msgSucesso(){
+
+    }
+
+    function msgAviso(){
+
+    }
+
+    function msgErro(){
+        
+    }
 ?>

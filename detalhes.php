@@ -40,7 +40,7 @@ require_once 'includes/funcoes.php';
         }
         ?>
     </table>
-    <a href="index.php"><img src="icones/icoback.png" alt="Voltar"></a>
+    <?php echo voltar(); ?>
 </div>
 <?php
 include_once 'rodape.php';
