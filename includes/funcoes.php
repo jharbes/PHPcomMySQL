@@ -12,19 +12,19 @@
     }
 
     function msgSucesso($msg){
-        $resp="<div class='sucesso' style='padding: 7px 15px; margin-bottom: 15px; border-radius: 15px; background-color: rgb(226,239,218); color: rgb(74,116,67);'><span class='material-symbols-outlined'>
+        $resp="<div class='sucesso'><span class='material-symbols-outlined'>
         check_circle</span> $msg</div>";
         return $resp;
     }
 
     function msgAviso($msg){
-        $resp="<div class='aviso' style='padding: 7px 15px; margin-bottom: 15px; border-radius: 15px; background-color: rgb(251,248,229); color: rgb(134,110,66);'><span class='material-symbols-outlined'>
+        $resp="<div class='aviso'><span class='material-symbols-outlined'>
         info</span> $msg</div>";
         return $resp;
     }
 
     function msgErro($msg){
-        $resp="<div class='erro' style='padding: 7px 15px; margin-bottom: 15px; border-radius: 15px; background-color: rgb(239,223,222); color: rgb(157,75,69);'><span class='material-symbols-outlined'>
+        $resp="<div class='erro'><span class='material-symbols-outlined'>
         error</span> $msg</div>";
         return $resp;
     }
