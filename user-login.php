@@ -39,10 +39,26 @@ require_once 'includes/login.php';
 
         if (is_null($u) || is_null($s))
             require 'user-login-form.php';
-        else
-            echo "Dados enviados!";
+        else{
+            $q="SELECT usuario, nome, senha, tipo FROM usuarios WHERE usuario = '$u' LIMIT 1";
+            $busca=$banco->query($q);
+            if (!$busca){
+                echo msgErro('Falha ao acessar o banco!');
+            }
+            else{
+                $reg=$busca->fetch_object();
+                if (testarHash($s,$reg->senha)){
+                    echo msgSucesso("Logado com sucesso!");
+                    $_SESSION['user']=$reg->usuario;
+                    $_SESSION['nome']=$reg->nome;
+                    $_SESSION['tipo']=$reg->tipo;
+                }
+                else
+                    echo msgErro("Senha Inválida!");
+            }
+        }
+        echo voltar();
     ?>
-
 </div>
 </body>
 </html>
