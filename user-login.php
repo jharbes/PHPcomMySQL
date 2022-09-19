@@ -19,7 +19,12 @@
         table td{
             padding: 10px;
         }
-        input#botao-entrar{
+        #entrar{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #botao-entrar{
             width: 100px;
             height: 30px;
             margin: 10px;
