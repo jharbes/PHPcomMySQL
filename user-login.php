@@ -28,6 +28,7 @@
             width: 100px;
             height: 30px;
             margin: 10px;
+            box-shadow: 2px 2px 5px grey;
         }
     </style>
 </head>
