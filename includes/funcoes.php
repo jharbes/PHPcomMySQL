@@ -8,7 +8,9 @@
     }
 
     function voltar(){
-        return "<a href='index.php'><img src='icones/icoback.png' alt='Voltar'></a>";
+        return "<a href='index.php'><span class='material-symbols-outlined'>
+        arrow_back
+        </span></a>";
     }
 
     function msgSucesso($msg){
