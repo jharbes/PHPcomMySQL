@@ -7,7 +7,7 @@
     <title>Listagem de Jogos</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
-    <link rel="shortcut icon" href="/icones/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/icones/mario.ico" type="image/x-icon">
 </head>
 <body>
 <?php
