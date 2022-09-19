@@ -2,7 +2,7 @@
 
 echo "<header>";
 
-echo "<a href='user-login.php'>Entrar</a>";
+echo "<a href='user-login.php' style='margin:10px;'>Entrar</a>";
 
 echo "</header>";
 
