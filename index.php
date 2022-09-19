@@ -16,6 +16,7 @@ $ordem=$_GET['o']??"n";
 $chave=$_GET['c']??"";
 ?>
 <div id="corpo">
+    <?php include 'topo.php';?>
     <h1>Escolha seu Jogo</h1>
     <form id="busca" action="index.php" method="get">
         Ordernar: 
