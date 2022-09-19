@@ -46,15 +46,18 @@ require_once 'includes/login.php';
                 echo msgErro('Falha ao acessar o banco!');
             }
             else{
-                $reg=$busca->fetch_object();
-                if (testarHash($s,$reg->senha)){
-                    echo msgSucesso("Logado com sucesso!");
-                    $_SESSION['user']=$reg->usuario;
-                    $_SESSION['nome']=$reg->nome;
-                    $_SESSION['tipo']=$reg->tipo;
-                }
-                else
-                    echo msgErro("Senha Inválida!");
+                if ($busca->num_rows>0){
+                    $reg=$busca->fetch_object();
+                    if (testarHash($s,$reg->senha)){
+                        echo msgSucesso("Logado com sucesso!");
+                        $_SESSION['user']=$reg->usuario;
+                        $_SESSION['nome']=$reg->nome;
+                        $_SESSION['tipo']=$reg->tipo;
+                    }
+                    else
+                        echo msgErro("Senha Inválida!");
+                }else
+                    echo msgErro("Usuário não encontrado!");
             }
         }
         echo voltar();
