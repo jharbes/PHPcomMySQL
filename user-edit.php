@@ -45,8 +45,34 @@ require_once 'includes/login.php';
     else{
         if (!isset($_POST['usuario']))
             include 'user-edit-form.php';
-        else
-            echo msgSucesso("Dados recebidos");
+        else{
+            $usuario=$_POST['usuario']??null;
+            $nome=$_POST['nome']??null;
+            $tipo=$_POST['tipo']??null;
+            $senha1=$_POST['senha1']??null;
+            $senha2=$_POST['senha2']??null;
+
+            $q="UPDATE usuarios SET usuario='$usuario', nome='$nome'";
+
+            if (empty($senha1) || is_null($senha1))
+                echo msgAviso("Senha antiga foi mantida!");
+            else if ($senha1===$senha2){
+                $senha=gerarHash($senha1);
+                $q.=", senha='$senha'";
+            }
+            else
+                echo msgErro("Senhas não conferem, a senha anterior será mantida.");
+            
+            $q.=" where usuario='".$_SESSION['user']."'";
+
+            if ($banco->query($q)){
+                echo msgSucesso("Usuário alterado com sucesso!");
+                logout();
+                echo msgAviso("Por segurança, efetue o <strong><a href='user-login.php'>login</a></strong> novamente.");
+            }
+            else
+                echo msgErro("Não foi possível alterar os dados.");
+        }
     }
     echo voltar();
 ?>
