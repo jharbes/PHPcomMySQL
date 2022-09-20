@@ -40,6 +40,7 @@ require_once 'includes/login.php';
 ?>
 <div id="corpo">
 
+<?php echo voltar(); ?>
 </div>
 <?php
 include_once 'rodape.php';

@@ -48,6 +48,7 @@ require_once 'includes/login.php';
         else
             echo msgSucesso("Dados recebidos");
     }
+    echo voltar();
 ?>
 </div>
 <?php
