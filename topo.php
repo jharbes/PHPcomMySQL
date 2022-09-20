@@ -6,9 +6,9 @@ if (empty($_SESSION['user']))
     echo "<a href='user-login.php'>Entrar</a>";
 else{
     echo "Olá, <strong>".$_SESSION['nome']."</strong>! |  (usuário do tipo <strong>".$_SESSION['tipo']."</strong>) ";
-    echo "Meus Dados | ";
+    echo "Meus Dados |";
     if (isAdmin()){
-        echo " Novo Usuário |";
+        echo " <a href='user-new.php'>Novo Usuário</a> |";
         echo " Novo Jogo |";
     }
     echo " <a href='user-logout.php'>Sair</a>";

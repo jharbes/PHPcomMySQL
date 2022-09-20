@@ -9,7 +9,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
-h1{
+h1,h2{
     font-family: PressStart2P;
     text-align: center;
     text-shadow: 4px 4px 7px rgba(110, 110, 110, 0.507);
