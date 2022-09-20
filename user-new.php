@@ -52,8 +52,18 @@ require_once 'includes/login.php';
             $senha2=$_POST['senha2']??null;
             $tipo=$_POST['tipo']??null;
 
-            if ($senha1===$senha2)
-                echo msgSucesso("Tudo certo para gravar!");
+            if ($senha1===$senha2){
+                if (empty($usuario || empty($nome) || empty($senha1) || empty($senha2) || empty($tipo))){
+                    echo msgErro("Todos os dados são obrigatórios!");
+                }
+                else
+                    $senha=gerarHash($senha1);
+                    $q="INSERT INTO usuarios (usuario,nome,senha,tipo) VALUES ('$usuario','$nome','$senha','$tipo')";
+                    if ($banco->query($q))
+                        echo msgSucesso("Usuário $usuario cadastrado com sucesso!");
+                    else
+                        echo msgErro("Não foi possível criar o usuário $usuario, talvez esse nome de usuário já esteja em uso.");
+            }
             else
                 echo msgErro("Senhas não conferem, repita o procedimento!");
         }
