@@ -25,7 +25,7 @@
             justify-content: center;
         }
         #botao-entrar{
-            width: 100px;
+            width:fit-content;
             height: 30px;
             margin: 10px;
             box-shadow: 2px 2px 5px grey;
