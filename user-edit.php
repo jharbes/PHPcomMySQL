@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de pagina</title>
+    <title>Alteração de dados do usuário</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
     <link rel="shortcut icon" href="/icones/mario.ico" type="image/x-icon">
@@ -41,9 +41,13 @@ require_once 'includes/login.php';
 <div id="corpo">
 <?php
     if (!isLogado())
-        echo msgErro("Efetue login para poder editar seus dados.");
-    else
-        echo msgSucesso("FEITO!");
+        echo msgErro("Efetue o <strong><a href='user-login.php'>login</a></strong> para poder editar seus dados.");
+    else{
+        if (!isset($_POST['usuario']))
+            include 'user-edit-form.php';
+        else
+            echo msgSucesso("Dados recebidos");
+    }
 ?>
 </div>
 <?php
