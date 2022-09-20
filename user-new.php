@@ -52,7 +52,10 @@ require_once 'includes/login.php';
             $senha2=$_POST['senha2']??null;
             $tipo=$_POST['tipo']??null;
 
-            echo "Pronto para salvar dados";
+            if ($senha1===$senha2)
+                echo msgSucesso("Tudo certo para gravar!");
+            else
+                echo msgErro("Senhas não conferem, repita o procedimento!");
         }
     }
 
