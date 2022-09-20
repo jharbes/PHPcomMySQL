@@ -34,6 +34,13 @@ require_once 'includes/login.php';
                 echo "<tr><td rowspan='3'><img src='$t' class='full'/></td></tr>";
                 echo "<td><h2>$reg->nome</h2>";
                 echo "Nota: ".number_format($reg->nota,1)."/10.0";
+                if (isAdmin()){
+                    echo "  <span class='material-symbols-outlined'>add</span> ";
+                    echo "<span class='material-symbols-outlined'>edit</span> ";
+                    echo "<span class='material-symbols-outlined'>delete</span>";
+                }
+                else if (isEditor())
+                    echo "  <span class='material-symbols-outlined'>edit</span>";
                 echo "<tr><td style='text-align: justify;'>$reg->descricao</td></tr>";
                 echo "<tr><td>Adm</td></tr>";
             }

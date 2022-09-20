@@ -67,7 +67,14 @@ $chave=$_GET['c']??"";
                         echo "<td><a href='detalhes.php?cod=$reg->cod'>$reg->nome</a>";
                         echo " [$reg->genero]";
                         echo "<br>$reg->produtora";
-                        echo "<td>Adm";
+                        if (isAdmin()){
+                            echo "<td>";
+                            echo "<span class='material-symbols-outlined'>add</span> ";
+                            echo "<span class='material-symbols-outlined'>edit</span> ";
+                            echo "<span class='material-symbols-outlined'>delete</span>";
+                        }
+                        else if (isEditor())
+                            echo "<td><span class='material-symbols-outlined'>edit</span>";
                     }
                 }
             }
