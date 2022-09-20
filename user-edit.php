@@ -39,7 +39,12 @@ require_once 'includes/funcoes.php';
 require_once 'includes/login.php';
 ?>
 <div id="corpo">
-
+<?php
+    if (!isLogado())
+        echo msgErro("Efetue login para poder editar seus dados.");
+    else
+        echo msgSucesso("FEITO!");
+?>
 </div>
 <?php
 include_once 'rodape.php';
