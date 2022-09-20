@@ -69,5 +69,8 @@ require_once 'includes/login.php';
         echo voltar();
     ?>
 </div>
+<?php
+include_once 'rodape.php';
+?>
 </body>
 </html>
