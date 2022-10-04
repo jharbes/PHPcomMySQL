@@ -3,6 +3,7 @@
 
 # PHPcomMySQL
 
-Projeto utilizando PHP e MySQL
+<h3>Projeto utilizando PHP e MySQL</h3>
+<br>
 
 *** EM CONSTRUÇÃO ***
