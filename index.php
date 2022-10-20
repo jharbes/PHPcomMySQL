@@ -21,7 +21,7 @@ $chave=$_GET['c']??"";
     <?php include 'topo.php';?>
     <h1>Escolha seu Jogo</h1>
     <form id="busca" action="index.php" method="get">
-        Ordernar: 
+        Ordenar: 
         <a href="index.php?o=n&c=<?php echo $chave; ?>">Nome</a> | 
         <a href="index.php?o=p&c=<?php echo $chave; ?>">Produtora</a> | 
         <a href="index.php?o=n1&c=<?php echo $chave; ?>">Nota Alta</a> | 
